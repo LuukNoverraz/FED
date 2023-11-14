@@ -6,17 +6,15 @@
 }
 
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--background-primary: #232f3e;
+	--background-secondary: #37475A;
+	--background-tertiary: #febd69;
+	--foreground-secondary:#fff;
+	--foreground-tertiary: #f08804;
 }
 
 
@@ -29,3 +27,107 @@
 
 /* jouw code */
 
+body {
+	margin: 0;
+	font-family: 'Bebas Neue', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	display: none;
+}
+
+header {
+	display: flex;
+    flex-direction: column;
+	color: var(--foreground-secondary);
+	background-color: var(--background-primary);
+}
+
+header .logo img:first-of-type {
+    max-height: 2vh;
+    margin: 0 3vw;
+}
+
+.top-header {
+	width: 100%;
+    display: flex;
+}
+
+.top-header > section {
+	width: 50%;
+	display: flex;
+    align-items: center;
+}
+
+header img {
+	max-height: 2.5vh;
+}
+
+header .sign-in {
+    justify-content: end;
+}
+
+header .sign-in img {
+	max-height: 3vh;
+    margin-left: 1vw;
+}
+
+header .sign-in img ~ p {
+	color: var(--foreground-tertiary);
+	font-weight: bold;
+	margin: 0 3vw;
+}
+
+.search {
+	display: flex;
+	justify-content: center;
+}
+
+.search input {
+	border: 0;
+	border-radius: 8px 0 0 8px;
+	width: 100%;
+	margin-left: 3vw;
+	padding: 0.75em 1em;
+	font-size: 1em;
+}
+
+.search button {
+	background-color: var(--background-tertiary);
+	border: 0;
+	border-radius: 0 8px 8px 0;
+	margin-right: 3vw;
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search img {
+    max-height: 8vw;
+}
+
+header nav {
+	display: flex;
+    align-items: center;
+}
+
+header nav p {
+	font-size: 0.85em;
+	padding: 0 2vw;
+	white-space: nowrap;
+}
+
+.delivery {
+	display: flex;
+	align-items: center;
+	background-color: var(--background-secondary);
+    padding: 0 3vw;
+	font-size: 0.75em;
+	font-weight: 500;
+}
+
+.delivery img {
+	margin-right: 1vw;
+}
