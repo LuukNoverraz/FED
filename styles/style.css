@@ -33,8 +33,16 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-	display: none;
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }
 
 header {
@@ -111,12 +119,14 @@ header .sign-in img ~ p {
 header nav {
 	display: flex;
     align-items: center;
+    padding: 0 3vw;
 }
 
 header nav p {
 	font-size: 0.85em;
 	padding: 0 2vw;
 	white-space: nowrap;
+    font-weight: 600;
 }
 
 .delivery {
@@ -130,4 +140,31 @@ header nav p {
 
 .delivery img {
 	margin-right: 1vw;
+}
+
+.black-friday {
+	display: flex;
+}
+
+.black-friday > section {
+	color: var(--foreground-secondary);
+	background-color: #03463F;
+    display: flex;
+    align-items: center;
+}
+
+.black-friday p {
+	font-weight: 700;
+	margin: 0;
+    padding: 0 4vw 0 6vw;
+    font-size: 1.5em;
+}
+
+.black-friday img {
+	max-width: 50%;
+}
+
+.international-shopping h2 {
+	font-size: 1em;
+	margin: 1em 0.5em;
 }
