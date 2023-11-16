@@ -231,6 +231,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. https://tailwindcss.com/docs/screen-readers
   2. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search
-  3. ...
+  3. https://css-tricks.com/snippets/css/complete-guide-grid/
+  4. 
 
 </details>
