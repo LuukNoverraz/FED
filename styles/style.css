@@ -22,6 +22,7 @@
 	--section-border: #E3E6E6;
 	--footer-text: #ccc;
 	--footer-background: #0C141E;
+	--product-background: #F7F8F8;
 }
 
 /****************/
@@ -145,10 +146,17 @@ header nav li {
     padding: 0 3vw;
 	font-size: 0.75em;
 	font-weight: 500;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .delivery img {
 	margin-right: 1vw;
+}
+
+.delivery h2 {
+	font-size: 12px;
+	font-weight: 500;
 }
 
 main h2 {
@@ -166,7 +174,7 @@ main h2 {
     align-items: center;
 }
 
-.black-friday p {
+.black-friday h2 {
 	font-weight: 700;
 	margin: 0;
     padding: 0 4vw 0 6vw;
@@ -203,11 +211,6 @@ main .sign-in {
 	border-bottom: 2px var(--section-border) solid;
 }
 
-main .sign-in section {
-	display: flex;
-	flex-direction: column;
-}
-
 main .sign-in h2 {
     margin: 0;
     padding-bottom: 0.8rem;
@@ -221,16 +224,18 @@ main .sign-in button {
 	cursor: pointer;
 	padding: 1em;
 	font-size: 1em;
+	width: 100%;
 }
 
-main section a {
+main .sign-in h3, .item-showcase h3 {
 	font-size: 15px;
-	padding-top: 0.75em;
-	color: var(--link);
+    padding-top: 0.75em;
+    color: var(--link);
     font-weight: 500;
+    margin: 0;
 }
 
-.item-showcase {
+.item-showcase, .top-sellers {
     padding: 14px 17px;
 	border-bottom: 2px var(--section-border) solid;
 }
@@ -246,7 +251,7 @@ main section a {
     width: 100%;
 }
 
-.item-showcase h2 {
+.item-showcase h2, .top-sellers h2 {
 	margin: 0;
 	padding-bottom: 0.75em;
 }
@@ -261,9 +266,41 @@ main section a {
 	color: var(--text-primary);
 }
 
+.top-sellers > a {
+	display: flex;
+}
+
+.top-sellers section {
+	color: var(--text-primary);
+	display: flex;
+	flex-direction: column;
+	margin-left: 12px;
+}
+
+.top-sellers img {
+	padding: 4px;
+}
+
+.top-sellers h3 {
+	font-weight: 500;
+	font-size: 15px;
+	margin: 0;
+}
+
+.top-sellers p {
+	font-size: 18px;
+}
+
+.top-sellers small {
+	position: relative;
+	font-size: 10px;
+    top: -0.5em;
+    line-height: 1.6rem;
+}
+
 .back-to-top {
 	display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 	background-color: var(--background-secondary);
 	color: var(--foreground-secondary);
@@ -274,10 +311,11 @@ main section a {
 	margin-top: 8px;
 }
 
-.back-to-top a {
+.back-to-top h2 {
 	font-weight: 600;
 	font-size: 11px;
 	line-height: 30px;
+	margin: 0;
 	text-transform: uppercase;
 }
 
@@ -289,15 +327,25 @@ main section a {
 	padding: 14px 17px;
 }
 
-.footer-links a {
+ul.footer-links {
+	list-style: none;
+	margin: 0;
+}
+
+.footer-links li {
 	font-size: 15px;
 	font-weight: 500;
 	padding-top: 0.75em;
 	padding-bottom: 0.75em;
 }
 
-.footer-links a:last-of-type {
+.footer-links li:last-of-type {
 	grid-column: 2;
+}
+
+.footer-links a, .footer-links a:active, .footer-links a:hover, .footer-links a:visited {
+	color: var(--foreground-secondary);	
+	text-decoration: none;
 }
 
 .footer-end {
@@ -305,14 +353,83 @@ main section a {
 	background-color: var(--footer-background);
 }
 
-.footer-end a {
+.footer-end h2 {
 	font-size: 15px;
 	font-weight: 500;
 	padding: 25px 0 25px 0;
+	margin: 0;
+	text-align: center;
+}
+
+.footer-end ul h2 {
+	padding: 0;
+}
+
+.footer-end ul:first-of-type a, .footer-end ul:first-of-type a:hover, .footer-end ul:first-of-type a:active, .footer-end ul:first-of-type a:visited {
+	color: var(--footer-text);
+	text-decoration: none;
+}
+
+.footer-end ul:first-of-type {
+	list-style: none;
+	margin: 0;
+	padding-top: 25px;
+	padding-bottom: 1em;
+	display: flex;
+    justify-content: center;
+    line-height: 15px;
+}
+
+.footer-end ul:first-of-type li {
+    padding: 1em 0.9em;
+}
+
+.footer-end ul:first-of-type a {
+	display: flex;
+    flex-direction: row-reverse;
+    padding: 0 8px;
+    align-items: center;
+}
+
+.footer-end ul:first-of-type h2 {
+	font-size: 15px;
+    flex: none;
+}
+
+.footer-end h2 + img {
+	max-height: 1.25em;
+    margin: 0 0.5em;
+}
+
+.footer-end h2 + p {
+	padding-bottom: 0;
+	font-size: 15px;
+    margin: 0 0.5em;
+	color: var(--foreground-secondary);
+}
+
+.footer-end ul {
+	color: var(--footer-text);
+	font-size: 11px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    line-height: 15px;
+}
+
+.footer-end li {
+	display: flex;
+    flex-direction: row-reverse;
+	padding: 0 8px;
 }
 
 .footer-end p {
 	color: var(--footer-text);
 	font-size: 11px;
 	text-align: center;
+	margin: 0;
+	padding-bottom: 35px;
 }
