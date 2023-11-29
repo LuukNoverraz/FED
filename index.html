@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 	
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="author" content="Luuk Noverraz">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Amazon.com</title>
@@ -17,20 +17,20 @@
 
 <body>
 	<header>
+		<h1 class="sr-only">Amazon</h1>
 		<section class="top-header">
-			<section class="logo">
-				<img src="images/hamburger.svg" alt="Menu">
-				<h1 class="sr-only">Amazon</h1>
-				<img src="images/amazon_logo.svg" alt="Amazon Logo">
-			</section>
+			<img src="images/hamburger.svg" alt="Menu">
+			<img src="images/amazon_logo.svg" alt="Amazon Logo">
 			<section class="sign-in">
-				<p>Sign in ›</p>
+				<h2>Sign in ›</h2>
 				<img src="images/user_icon.svg" alt="User icon">
+				<img src="images/shopping_cart.png" alt="Shopping cart">
 				<p>0</p>
 			</section>
 		</section>
 		<section class="search">
-			<input type="search" id="site-search" placeholder="Search Amazon"/>
+			<h2 class="sr-only">Search</h2>
+			<input type="search" id="site-search" placeholder="Search Amazon">
 			<button><img src="images/search.svg" alt="Search button"></button>
 		</section>
 		<nav>
@@ -43,110 +43,110 @@
 		</nav>
 		<section class="delivery">
 			<h2>Deliver to Netherlands ⌵</h2>
-			<img src="images/location.svg">
+			<img src="images/location.svg" alt="Location icon">
 		</section>
 	</header>
 	<main>
 		<section class="black-friday">
-			<section>
-				<h2>Shop Early Black Friday deals</h2>
-			</section>
-			<img src="images/blackfriday.jpeg">
+			<h2>Shop Early Black Friday deals</h2>
+			<img src="images/blackfriday.jpeg" alt="An amazon gift box with a red ribbon tied around it.">
 		</section>
 		<section class="international-shopping">
 			<h2>Discover Amazon International Shopping</h2>
 			<article class="international-shopping-item">
-				<img src="images/international_shipping_1.png" alt="Local delivery">
-				<p>Local Delivery</p>
+				<h3>Local Delivery</h3>
+				<img src="images/international_shipping_1.png" alt="A plane soaring around the Earth, with a globe in the background.">
 			</article>
 			<article class="international-shopping-item">
-				<img src="images/international_shipping_2.png" alt="Free returns">
-				<p>FREE Returns*</p>
+				<h3>FREE Returns*</h3>
+				<img src="images/international_shipping_2.png" alt="A box with an arrow around it.">
 			</article>
 			<article class="international-shopping-item">
-				<img src="images/international_shipping_3.png" alt="Select your language">
-				<p>Select your language</p>
+				<h3>Select your language</h3>
+				<img src="images/international_shipping_3.png" alt="Two speech bubbles: one with the letter 'a' and the other with a Chinese character written inside.">
 			</article>
 			<article class="international-shopping-item">
-				<img src="images/international_shipping_4.png" alt="Select your currency">
-				<p>Select your currency</p>
+				<h3>Select your currency</h3>
+				<img src="images/international_shipping_4.png" alt="Credit card and pound coin icons.">
 			</article>
 		</section>
 		<section class="sign-in">
 			<h2>Sign in for the best experience</h2>
-			<button>Sign in securely</button>
-			<a>
+			<a href="https://www.amazon.com/ap/signin?openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fref%3Dgw_sgn_ib%3F_encoding%3DUTF8%26pf_rd_p%3D0307aea4-d94c-4e80-b967-cb3f1c3ff509%26pd_rd_wg%3Dw5PeA%26pf_rd_r%3DT0Z8MNY5VQYAB2YDZ0P7%26content-id%3Damzn1.sym.0307aea4-d94c-4e80-b967-cb3f1c3ff509%26pd_rd_w%3DaNh2D%26painterId%3Dsign-in-v2%26pd_rd_r%3D8bdb83b8-c6b0-49c1-a7f9-7c6f3fe0121a&openid.assoc_handle=anywhere_v2_us&openid.pape.max_auth_age=0">
+				<h3>Sign in securely</h3>
+			</a>
+			<a href="https://www.amazon.com/ap/register?openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fref%3Dgw_sgn_ib%3F_encoding%3DUTF8%26pf_rd_p%3D0307aea4-d94c-4e80-b967-cb3f1c3ff509%26pd_rd_wg%3Dw5PeA%26pf_rd_r%3DT0Z8MNY5VQYAB2YDZ0P7%26content-id%3Damzn1.sym.0307aea4-d94c-4e80-b967-cb3f1c3ff509%26pd_rd_w%3DaNh2D%26painterId%3Dsign-in-v2%26pd_rd_r%3D8bdb83b8-c6b0-49c1-a7f9-7c6f3fe0121a&openid.assoc_handle=anywhere_v2_us">
 				<h3>Create an account</h3>
 			</a>
 		</section>
 		<section class="item-showcase">
 			<h2>Fashion trends in Shoes</h2>
-			<section>
+			<div>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_1.jpeg" alt="A woman on a chair wearing heels">
-						<p>Shop womens</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=WOmen%20Shoes&ref=nb_sb_noss_1">
+						<h3>Shop womens</h3>
+						<img src="images/showcase_shoes_1.jpeg" alt="Woman in pink top and jeans sitting on chair, wearing heels.">
 					</a>
 				</article>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_2.jpeg" alt="A blue shoe and a white shoe">
-						<p>Shop mens</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=Men%20Shoes&ref=nb_sb_noss_1">
+						<h3>Shop mens</h3>
+						<img src="images/showcase_shoes_2.jpeg" alt="New Balance sneakers on a yellow box: stylish footwear showcased on vibrant packaging.">
 					</a>
 				</article>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_3.jpeg" alt="A pink and a blue sandal">
-						<p>Shop kids</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=Kid%20Shoes&ref=nb_sb_noss_1">
+						<h3>Shop kids</h3>
+						<img src="images/showcase_shoes_3.jpeg" alt="Colorful sandals with rainbow straps.">
 					</a>
 				</article>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_4.jpeg" alt="Two sandals">
-						<p>Shop more shoes</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=Shoes&ref=nb_sb_noss_2">
+						<h3>Shop more shoes</h3>
+						<img src="images/showcase_shoes_4.jpeg" alt="Two sandals with buckles and straps.">
 					</a>
 				</article>
-			</section>
-			<a>
+			</div>
+			<a href="https://www.amazon.com/s/?_encoding=UTF8&k=Best%20sellers%20in%20Shoes&ref=nb_sb_noss_2">
 				<h3>Shop more</h3>
 			</a>
 		</section>
 		<section class="item-showcase">
 			<h2>Shoes Under $60</h2>
-			<section>
+			<div>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_5.jpeg" alt="A pair of heels">
-						<p>Women's</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=women%20footwear&rh=p_36%3A-5000&rnid=2661611011&ref=sr_nr_p_36_5">
+						<h3>Women's</h3>
+						<img src="images/showcase_shoes_5.jpeg" alt="A pair of nude pumps on a pink background.">
 					</a>
 				</article>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_6.jpeg" alt="A pair of dark blue shoes">
-						<p>Men's</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=men%20footwear&rh=p_36%3A-5000&rnid=2661611011&ref=sr_nr_p_36_5">
+						<h3>Men's</h3>
+						<img src="images/showcase_shoes_6.jpeg" alt="Adidas running shoes on a sleek tiled floor.">
 					</a>
 				</article>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_7.jpeg" alt="A girl wearing red heels">
-						<p>Girl's</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=girls%20footwear&rh=p_36%3A-5000&rnid=2661611011&ref=sr_nr_p_36_5">
+						<h3>Girl's</h3>
+						<img src="images/showcase_shoes_7.jpeg" alt="A woman's legs adorned with red jeweled shoes.">
 					</a>
 				</article>
 				<article>
-					<a>
-						<img src="images/showcase_shoes_8.jpeg" alt="A boy wearing a pair of brown shoes">
-						<p>Boy's</p>
+					<a href="https://www.amazon.com/s/?_encoding=UTF8&k=boys%20footwear&rh=p_36%3A-5000&rnid=2661611011&ref=sr_nr_p_36_5">
+						<h3>Boy's</h3>
+						<img src="images/showcase_shoes_8.jpeg" alt="A boy wearing brown sneakers walking on a brick sidewalk.">
 					</a>
 				</article>
-			</section>
-			<a>
+			</div>
+			<a href="https://www.amazon.com/s/?_encoding=UTF8&k=Shoes&rh=p_36%3A-5000&rnid=2661611011&ref=sr_nr_p_36_3">
 				<h3>Shop all</h3>
 			</a>
 		</section>
 		<section class="top-sellers">
 			<h2>International top sellers in Kitchen</h2>
-			<a>
-				<img src="images/canning_lids.jpeg" alt="Canning lids">
+			<a href="https://www.amazon.com/128-Count-Regular-Mouth-Canning-Lids/dp/B08SLKX339/?_encoding=UTF8&ref_=exports_top_sellers_unrec">
+				<img src="images/canning_lids.jpeg" alt="Group of silver lids labeled 128 pack">
 				<section>
 					<h3>128-Count, Regular Mouth Canning Lids for Ball, Kerr Jars - Split-Type Me…</h3>
 					<p>
@@ -154,15 +154,32 @@
 					</p>
 				</section>
 			</a>
+			<a href="https://www.amazon.com/Ravenscroft-Crystal-Essentials-International-Tasting/dp/B00CISXFCC/?_encoding=UTF8&ref_=exports_top_sellers_unrec">
+				<img src="images/ravenscroft_crystal.jpg" alt="Group of silver lids labeled 128 pack">
+				<section>
+					<h3>Ravenscroft Crystal | Set of 12 Elegant European-Made, 100% Lead-Free Cry…</h3>
+					<p>
+						<small>$</small>45<small>99</small>
+					</p>
+				</section>
+			</a>
+			<a href="https://www.amazon.com/Presto-01784-23-Quart-Induction-Compatible/dp/B07PYLD742/?_encoding=UTF8&ref_=exports_top_sellers_unrec">
+				<img src="images/presto.jpg" alt="Group of silver lids labeled 128 pack">
+				<section>
+					<h3>Presto 01784 23-Quart Induction Compatible Pressure Canner, Silver, A…</h3>
+					<p>
+						<small>$</small>151<small>95</small> 
+						<small>List: <span>$175.99</span></small>
+					</p>
+				</section>
+			</a>
 		</section>
 	</main>
 	<footer>
-		<section class="back-to-top">
-			<h2>
-				<a>Top of page</a>
-			</h2>
-			<img src="images/up-arrow.svg">
-		</section>
+		<button class="back-to-top" id="topButton" onclick="scrollToTop()">
+			<h2>Top of page</h2>
+			<img src="images/up-arrow.svg" alt="Arrow pointing up">
+		</button>
 		<ul class="footer-links">
 			<li>
 				<a href="https://www.amazon.com/?ref_=navm_ftr_home">Amazon.com</a>
@@ -219,15 +236,13 @@
 					</a>
 				</li>
 			</ul>
-			<a>
-				<h2>Already a customer? Sign in</h2>
-			</a>
+			<h2>Already a customer? <a href="https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3F_encoding%3DUTF8%26ref_%3Dnav_m_foot_si&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=anywhere_v2_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0">Sign in</a></h2>
 			<ul>
-				<li>Conditions of Use</li>
-				<li>Privacy Notice</li>
-				<li>Your Ads Privacy Choices</li>
+				<li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088&ref_=navm_ftr_cou">Conditions of Use</a></li>
+				<li><a href="https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496&ref_=footer_privacy">Privacy Notice</a></li>
+				<li><a href="https://www.amazon.com/privacyprefs?ref_=footer_iba">Your Ads Privacy Choices</a></li>
 				<li>
-					<img src="images/nav-sprite.png">
+					<img src="images/nav-sprite.png" alt="A blue circle with a check mark on it.">
 				</li>
 			</ul>
 			<p>© 2023, Luuk Noverraz</p>

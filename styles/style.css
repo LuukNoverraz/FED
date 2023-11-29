@@ -23,11 +23,16 @@
 	--footer-text: #ccc;
 	--footer-background: #0C141E;
 	--product-background: #F7F8F8;
+	--former-price: #565959;
 }
 
 /****************/
 /*   STYLING    */
 /****************/
+
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	margin: 0;
@@ -54,7 +59,7 @@ header {
 	background-color: var(--background-primary);
 }
 
-header .logo img:first-of-type {
+header img:first-of-type {
     max-height: 2vh;
     margin: 0 3vw;
 }
@@ -62,6 +67,7 @@ header .logo img:first-of-type {
 .top-header {
 	width: 100%;
     display: flex;
+    align-items: center;
 }
 
 .top-header > section {
@@ -76,6 +82,12 @@ header img {
 
 header .sign-in {
     justify-content: end;
+    flex-grow: 1;
+}
+
+header .sign-in h2 {
+	font-size: 1em;
+	font-weight: 400;
 }
 
 header .sign-in img {
@@ -83,15 +95,27 @@ header .sign-in img {
     margin-left: 1vw;
 }
 
+header .sign-in img:nth-of-type(2) {
+	margin-right: 6vw;
+}
+
 header .sign-in img ~ p {
+	position: absolute;
+    right: 2.25em;
+    top: -10px;
 	color: var(--foreground-tertiary);
 	font-weight: bold;
-	margin: 0 3vw;
 }
 
 .search {
 	display: flex;
 	justify-content: center;
+	background: linear-gradient(
+		to right,
+		var(--background-primary) 5%,
+		var(--foreground-secondary) 5% 95%,
+		var(--background-primary) 95% 100%
+	);
 }
 
 .search input {
@@ -106,7 +130,7 @@ header .sign-in img ~ p {
 .search button {
 	background-color: var(--background-tertiary);
 	border: 0;
-	border-radius: 0 8px 8px 0;
+	border-radius: 8px;
 	margin-right: 3vw;
     padding: 0 2vw;
     display: flex;
@@ -167,14 +191,11 @@ main h2 {
 	display: flex;
 }
 
-.black-friday > section {
+.black-friday h2 {
 	color: var(--foreground-secondary);
 	background-color: #03463F;
     display: flex;
     align-items: center;
-}
-
-.black-friday h2 {
 	font-weight: 700;
 	margin: 0;
     padding: 0 4vw 0 6vw;
@@ -192,7 +213,8 @@ main h2 {
 
 .international-shopping-item {
 	display: inline-flex;
-	flex-direction: column;
+    align-items: center;
+	flex-direction: column-reverse;
 	max-width: 5.5em;
 	margin-left: 12px;
 }
@@ -201,8 +223,10 @@ main h2 {
 	max-width: 5em;
 }
 
-.international-shopping p {
+.international-shopping h3 {
 	text-align: center;
+	font-weight: 400;
+	font-size: 1em;
 }
 
 main .sign-in {
@@ -216,7 +240,14 @@ main .sign-in h2 {
     padding-bottom: 0.8rem;
 }
 
-main .sign-in button {
+main .sign-in a {
+	text-decoration: none;
+}
+
+main .sign-in h2 + a {
+	display: flex;
+    justify-content: center;
+    align-items: center;
 	background-color: var(--button-primary);
 	border: var(--button-secondary) solid 0.1rem;
 	border-radius: 0.8rem;
@@ -225,6 +256,11 @@ main .sign-in button {
 	padding: 1em;
 	font-size: 1em;
 	width: 100%;
+}
+
+main .sign-in h2 + a h3 {
+	padding: 0;
+	color: var(--text-primary);
 }
 
 main .sign-in h3, .item-showcase h3 {
@@ -240,7 +276,7 @@ main .sign-in h3, .item-showcase h3 {
 	border-bottom: 2px var(--section-border) solid;
 }
 
-.item-showcase > section {
+.item-showcase div {
     display: grid;
     gap: 8px;
     grid-template-columns: 1fr 1fr;
@@ -251,23 +287,33 @@ main .sign-in h3, .item-showcase h3 {
     width: 100%;
 }
 
+.item-showcase a {
+	text-decoration: none;
+}
+
 .item-showcase h2, .top-sellers h2 {
 	margin: 0;
 	padding-bottom: 0.75em;
 }
 
-.item-showcase p {
+.item-showcase p, .item-showcase article h3 {
 	margin: 0;
+	padding: 0;
+	color: var(--text-primary);
 	font-size: 15px;
     font-weight: 500;
 }
 
 .item-showcase article a {
 	color: var(--text-primary);
+	display: flex;
+	flex-direction: column-reverse;
+    text-decoration: none;
 }
 
 .top-sellers > a {
 	display: flex;
+	text-decoration: none;
 }
 
 .top-sellers section {
@@ -279,6 +325,9 @@ main .sign-in h3, .item-showcase h3 {
 
 .top-sellers img {
 	padding: 4px;
+    height: 6.5em;
+    min-width: 6.5em;
+    object-fit: contain;
 }
 
 .top-sellers h3 {
@@ -289,6 +338,8 @@ main .sign-in h3, .item-showcase h3 {
 
 .top-sellers p {
 	font-size: 18px;
+	font-weight: 500;
+	margin: 0;
 }
 
 .top-sellers small {
@@ -298,8 +349,20 @@ main .sign-in h3, .item-showcase h3 {
     line-height: 1.6rem;
 }
 
+.top-sellers small:last-of-type {
+	color: var(--former-price);
+	font-size: 13px;
+	top: 0;
+}
+
+.top-sellers small span {
+	text-decoration: line-through;
+}
+
 .back-to-top {
 	display: flex;
+	width: 100%;
+	border: 0;
     flex-direction: column-reverse;
     align-items: center;
 	background-color: var(--background-secondary);
@@ -312,7 +375,7 @@ main .sign-in h3, .item-showcase h3 {
 }
 
 .back-to-top h2 {
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 11px;
 	line-height: 30px;
 	margin: 0;
@@ -432,4 +495,13 @@ ul.footer-links {
 	text-align: center;
 	margin: 0;
 	padding-bottom: 35px;
+}
+
+.footer-end a {
+	color: var(--foreground-secondary);
+	text-decoration: none;
+}
+
+.footer-end li a {
+	color: var(--footer-text);
 }
